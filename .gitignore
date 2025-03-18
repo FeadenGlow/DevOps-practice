@@ -1,5 +1,5 @@
-home04/.terraform/*
-home04/terraform.tfstate
-home04/terraform.tfstate.backup
+home05/.terraform/*
+home05/terraform.tfstate
+home05/terraform.tfstate.backup
 .ansible
 .DS_Store
