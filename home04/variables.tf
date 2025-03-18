@@ -1,6 +1,6 @@
 variable "ami_id" {
   type = string
-  default = "ami-00111e93b2d8aff40"
+  default = "ami-002e81a9a522f1f19"
 }
 
 variable "region" {
@@ -20,10 +20,10 @@ variable "vpc_id" {
 
 variable "public_key_path" {
   type = string
-  default = "/Users/macbookpro/.ssh/id_ed25519.pub"
+  default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMzlGmgtlNKjldqSNS+El6BuArmn1mi83W/ezNE2S0tX macbookpro@MacBookPros-MacBook-Pro.local"
 }
 
 variable "public_teacher_key_path" {
   type = string
-  default = "/Users/macbookpro/documents/distedu/util/id_ed25519.pub"
+  default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkAhvfRyUvgsUwENIds1a/4OvuHQgLki8K1EzPltl5M i.ilin@iilin-pro14.local"
 }

@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "my_key" {
     key_name = "my-key"
-    public_key = file(var.public_key_path)
+    public_key = var.public_key_path
 }
 
 resource "aws_instance" "example" {
@@ -15,7 +15,7 @@ resource "aws_instance" "example" {
 
    user_data = <<-EOF
               #!/bin/bash
-              echo '${file(var.public_teacher_key_path)}' >> /home/ubuntu/.ssh/authorized_keys
+              echo '${var.public_teacher_key_path}' >> /home/ubuntu/.ssh/authorized_keys
               EOF
 
   tags = {
@@ -39,7 +39,7 @@ resource "aws_security_group" "my_sg" {
     from_port = 5432
     to_port = 5435
     protocol = "tcp"
-    cidr_blocks = ["172.31.88.232/32", "172.31.80.152/32"]
+    cidr_blocks = [format("%s/32", aws_instance.example[0].private_ip), format("%s/32", aws_instance.example[1].private_ip)]
   }
 
   egress {

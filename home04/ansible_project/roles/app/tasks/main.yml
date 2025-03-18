@@ -1,0 +1,5 @@
+- name: Ensure application directory exists
+  ansible.builtin.file:
+    path: /opt/myapp
+    state: directory
+    mode: '0755'

@@ -1,3 +1,5 @@
 home04/.terraform/*
-home04/.terraform.lock.hcl
+home04/terraform.tfstate
+home04/terraform.tfstate.backup
+.ansible
 .DS_Store

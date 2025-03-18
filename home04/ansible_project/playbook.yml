@@ -1,0 +1,6 @@
+- name: Configure servers
+  hosts: servers
+  become: true
+  roles:
+    - common
+    - app
